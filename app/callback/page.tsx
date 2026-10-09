@@ -1,0 +1,1 @@
+export default function Callback(){return <main className="shell"><section className="hero"><div className="card"><h2>Connecting your Deriv account…</h2><p className="muted">Please wait while Leonekk completes the secure authorization.</p></div></section></main>}

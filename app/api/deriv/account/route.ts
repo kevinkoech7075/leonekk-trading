@@ -1,0 +1,2 @@
+import {NextRequest,NextResponse} from 'next/server';
+export async function GET(req:NextRequest){const token=req.cookies.get('leonekk_access_token')?.value;if(!token)return NextResponse.json({connected:false},{status:401});const r=await fetch('https://api.derivws.com/trading/v1/options/accounts',{headers:{Authorization:`Bearer ${token}`},cache:'no-store'});const data=await r.json();return NextResponse.json(data,{status:r.status});}
